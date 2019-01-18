@@ -8,6 +8,6 @@ require 'pp'
 @doc = REXML::Document.new(@xml, :ignore_whitespace_nodes=>:all).elements['//listings']
 
 # XPath の記法でパスを指定する
-@doc.each do |elem|
+@doc.each('//listing/') do |elem|
   puts elem
 end
